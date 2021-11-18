@@ -10,3 +10,6 @@ To Run the Main.py it require 3 command line argument
 
 Run this Code on your terminal 
 python Main.py -Number X -ImageDir /path/of/iamge/directory -AnnotationDir path/of/annotation/directory
+
+Default image format is "jpeg"
+if you have "jpg", "png" then do the change in Dataset.py & Main.py to get the desired image format
