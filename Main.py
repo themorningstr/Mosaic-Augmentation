@@ -12,7 +12,6 @@ import Mosaic
 import argparse
 from PIL import Image
 from datetime import datetime
-import cv2
 
 
 if os.path.isdir(os.getcwd() + "/Images"):
@@ -61,12 +60,6 @@ def Main():
     OutputImage = Image.fromarray(OutputArray)
     OutputImage.save(fp = os.path.join(OutputImageSavedPath,OutputImageFile))
 
-    for anno in OutputAnnotation:
-        start_point = (int(anno[1] * OutputSize[1]), int(anno[2] * OutputSize[0]))
-        end_point = (int(anno[3] * OutputSize[1]), int(anno[4] * OutputSize[0]))
-        cv2.rectangle(OutputArray, start_point, end_point, (0, 255, 0), 1, cv2.LINE_AA)
-    cv2.imwrite('output_box5.jpg', OutputArray)
-    
     
     YoloAnnotations = []
 
